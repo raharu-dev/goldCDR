@@ -1,9 +1,9 @@
 /* goldCDR */
 
 /* For Screenshots */
-/* .profile-artwork {
+.profile-artwork {
     display: none;
-} */
+}
 
 /* ------------------------------------------------------------------------------ */
 /* Variables for easy edit */
@@ -13,7 +13,7 @@
     /* Main theme colors */
     --mainLight: #4C5844!important;
     --mainDark: #3F4738;
-    --textMain: #EFF6EE;
+    --mainWhite: #EFF6EE;
     --mainHighlight: #D5BD32;
 
     /* Colors used for box shading */
@@ -29,7 +29,7 @@
 /* GETTING RID OF THE MODERN STYLE */
 /* ------------------------------------------------------------------------------ */
 
-/* Disabling the blur and roundness on most elements*/
+/* Disabling the blur and roundness on most elements, and making it look plain*/
 :root, body, .settings-sidebar-search, .content-area, .modal-titlebar, .settings-title-bar,
  .cider-dialog-window, .settings-window, .cider-dialog-window--generic, .q-page-container,
  .new-shell-page-container, .q-btn, .sidebar_nav-btn, .sidebar-playlist, .more-btn, body[density="desktop"] .sidebar_nav-btn,
@@ -37,7 +37,9 @@
  .category-brick, .category-brick-artwork, .artwork, .sidebar-artwork, .powerswoosh, .shelf-navigation,
  .q-item, .q-list, .profile-tab, .profile-btn, .profile-artwork, .c-listitem-short, .content-title, .mood-item, .mood-artwork,
   .album-artwork, .q-input.c-select, .q-field__control, .q-select.c-select, .c-input--element, .ri-list-item, .library-song-item,
-  .top-conatiner, .mediaitem-topresult, .mediaitem-topresult::after, .artworkContainer, .artworkLockup, .am-expansion-item {
+  .top-conatiner, .mediaitem-topresult, .mediaitem-topresult::after, .artworkContainer, .artworkLockup, .am-expansion-item,
+  .album-header, .ios-style, .progress-container, .am-progress, .am-playback-actions, .shelf-artwork, .ri-shelf-item, .lockupControls,
+  .menu, .play, .menu-btn, .add  {
     --glassFilter: none;
     backdrop-filter: none;
     --windowRadius: 0px;
@@ -47,6 +49,7 @@
     border: 0px;
     --radius: 0px;
     cursor: default;
+    /* background-color: rgba(0,0,0,0); */
 }
 /* Hiding Elements */
 .selection-indicator{
@@ -74,8 +77,19 @@ body.body--dark, body.body--light {
 }
 
 /* Main background */
-html[no-glass], .q-page {
+html[no-glass] {
     background-color: var(--mainLight);
+}
+.ns-qlayout::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    /* background-color: var(--mainDark); */
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
 }
 /* Pop Ups */
 .settings-window, .cider-dialog-window, .cider-dialog-window--generic{
@@ -86,10 +100,6 @@ html[no-glass], .q-page {
 /* ------------------------------------------------------------------------------ */
 /* Main Page / View */
 /* ------------------------------------------------------------------------------ */
-.item-set{
-    padding:10px;
-    gap:10px;
-}
 .c-listitem-short{
     background-color: var(--mainDark);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
@@ -112,12 +122,28 @@ html[no-glass], .q-page {
     padding: 10px;
     color: var(--mainHighlight);
 }
-
+/* PLAYBACK */
+.lcdControls{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.playback-action-button{
+    margin:0px 5px;
+    padding: 5px;
+}
+.am-playback-actions{
+    margin:0;
+    align-items: flex-start;
+    display: flex;
+    padding-bottom: 5px;
+}
 /* ------------------------------------------------------------------------------ */
 /* Views */
 /* ------------------------------------------------------------------------------ */
+
 /* Album / Playlist VIEW */
-.tracks-list, .ri-shelf{
+.tracks-list{
     padding: 10px;
     gap: 10px;
     background-color: var(--mainDark);
@@ -125,21 +151,60 @@ html[no-glass], .q-page {
     -2px -2px 0px var(--shadeLight) inset;
 }
 .ri-list-item{
+    margin: 5px;
     background-color: var(--mainLight);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
+    color: var(--mainHighlight)
 }
 .album-artwork::after{
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
 .album-details{
+    background-color: var(--mainLight);
+    padding: 10px;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.album-header{
+    --bgColor: var(--mainLight);
+    --textColor1: var(--mainHighlight);
+}
+.shelf-artwork::after{
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+/* THERE 2x album-actions because
+    there are album-actions inside album-actions
+    instead of just album-actions-right -> album-actions-misc (or something)
+*/
+.album-actions[data-v-ccafc47d]{
     background-color: var(--mainDark);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-/* Search Results */
+.album-actions[data-v-e77db66d]{ /* This is the inside one */
+    padding:0px;
+    box-shadow: none;
+}
+.album-actions-left{
+    display: flex;
+}
+.tracks-header{
+    background-color: var(--mainLight);
+    padding: 10px;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+/* Buttons (play, shuffle, etc.) */
+.album-header-colorized[data-v-1f0eadf7] .q-btn, .album-header-colorized[data-v-ccafc47d] .q-btn{ /* EDITORIAL LAYOUT, NORMAL */
+    --outlineColor: none;
+    --backgroundGradient: none;
+    --textColor1: var(--mainWhite);
+}
+/* SEARCH RESULTS VIEW */
 .q-mb-lg{
     padding: 10px;
     background-color: var(--mainDark);
@@ -151,7 +216,38 @@ html[no-glass], .q-page {
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
-
+/* ARTIST VIEW */
+.c-listitem-short{
+    margin: 5px 0px;
+}
+.item-set[data-v-a9b9c6f9]{
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0px;
+}
+/* Making Menu div invisible because I believe somewhere it was a button now it is a div with a button (UNSURE) */
+.menu[data-v-a8f725ef]{
+    background-color: transparent;
+    box-shadow: none;
+}
+.menu[data-v-a8f725ef]:hover{
+    background-color: transparent;
+    box-shadow: none;
+}
+.menu[data-v-a8f725ef]:active{
+    background-color: transparent;
+    box-shadow: none;
+}
+/* SETTINGS VIEW */
+.settings-sidebar-search, .settings-sidebar-items {
+    background-color: transparent;
+}
+.settings-page-bounds{
+    margin: 39px 10px 10px 10px;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+    background-color: var(--mainDark);
+}
 /* ------------------------------------------------------------------------------ */
 /* Library */
 /* ------------------------------------------------------------------------------ */
@@ -182,22 +278,35 @@ html[no-glass], .q-page {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-
+/* ALBUM LIBRARY */
+.ri-shelf-item{
+    background-color: var(--mainLight);
+    margin: 10px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
 /* ------------------------------------------------------------------------------ */
 /* INTERACTABLES */
 /* ------------------------------------------------------------------------------ */
 
 /* Buttons */
-.q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn, .settings-sidebar-item, .profile-btn, .c-listitem-short{
+.q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn,
+ .settings-sidebar-item, .profile-btn, .c-listitem-short, .playback-action-button,
+ .menu, .play, .ion-ios-close, .menu-btn{
     background-color: var(--mainLight);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
-.q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover, .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover{
+.q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover,
+ .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover, .playback-action-button:hover,
+ .menu:hover, .play:hover, .ion-ios-close:hover, .menu-btn:hover{
     background-color: var(--mainDark);
     cursor: default;
 }
-.q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active, .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active{
+.q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active,
+ .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active, .playback-action-button:active,
+ .menu:active, .play:active, .ion-ios-close:active, .menu-btn:active{
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -210,7 +319,7 @@ html[no-glass], .q-page {
 }
 
 /* Selectboxes and TextBoxes*/
-.c-select, .cSearch{
+.c-select, .cSearch, .c-input-container, .q-field__control{
     background-color: var(--mainDark);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
         -2px -2px 0px var(--shadeLight) inset;
@@ -235,6 +344,7 @@ html[no-glass], .q-page {
 
 /* Selections */
 .q-item {
+    margin: 10px 0px;
     background-color: var(--mainLight);
     cursor: default;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
@@ -256,11 +366,22 @@ input[type=checkbox][switch] {
 input[type=checkbox][switch]:before{
     border-radius: 0px;
 }
-.item-set, .mood-item{
-    background-color: var(--mainDark);
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-}
+
 .mediaitem-shelf-content{
     padding-right: 20px;
 }
+.item-set{ /* The big boxes with icons in HOME and NEWS i.e. Top Picks for You*/
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+    background-color: var(--mainLight);
+    padding:10px;
+}
+
+
+
+/* ???*/
+/* .mood-item{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+} */
