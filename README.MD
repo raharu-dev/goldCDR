@@ -15,7 +15,6 @@ for example you can do:
 `%appdata%\sh.cider.dotnet\themes\3`
 
 ## Screenshots
-**Those are screenshot of the first version (CURRENT)**
 ![Screenshot 1](./screenshots/1.jpg)
 ![Screenshot 2](./screenshots/2.jpg)
 ![Screenshot 3](./screenshots/3.jpg)

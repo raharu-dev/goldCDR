@@ -1,5 +1,10 @@
 /* goldCDR */
 
+/* For Screenshots */
+/* .profile-artwork {
+    display: none;
+} */
+
 /* ------------------------------------------------------------------------------ */
 /* Variables for easy edit */
 /* ------------------------------------------------------------------------------ */
@@ -31,13 +36,15 @@
  .mediaitem-card, .settings-sidebar-item, .c-select, .search-box_container, .cSearch, .compact-box,
  .category-brick, .category-brick-artwork, .artwork, .sidebar-artwork, .powerswoosh, .shelf-navigation,
  .q-item, .q-list, .profile-tab, .profile-btn, .profile-artwork, .c-listitem-short, .content-title, .mood-item, .mood-artwork,
-  .album-artwork, .q-input.c-select, .q-field__control, .q-select.c-select, .c-input--element, .ri-list-item {
+  .album-artwork, .q-input.c-select, .q-field__control, .q-select.c-select, .c-input--element, .ri-list-item, .library-song-item,
+  .top-conatiner, .mediaitem-topresult, .mediaitem-topresult::after, .artworkContainer, .artworkLockup, .am-expansion-item {
     --glassFilter: none;
     backdrop-filter: none;
     --windowRadius: 0px;
     --genericBorderRadius: 0px;
     box-shadow: none !important;
     border-radius: 0px !important;
+    border: 0px;
     --radius: 0px;
     cursor: default;
 }
@@ -47,7 +54,7 @@
 }
 
 /* ------------------------------------------------------------------------------ */
-/* ACTUAL THEMEING */
+/* General Themeing */
 /* ------------------------------------------------------------------------------ */
 
 /* Accent Color */
@@ -76,9 +83,8 @@ html[no-glass], .q-page {
     -2px -2px 0px var(--shadeDark) inset;
 }
 
-
 /* ------------------------------------------------------------------------------ */
-/* Main Page */
+/* Main Page / View */
 /* ------------------------------------------------------------------------------ */
 .item-set{
     padding:10px;
@@ -90,10 +96,22 @@ html[no-glass], .q-page {
     -2px -2px 0px var(--shadeLight) inset;
 }
 /* Profile Button at the left bottom */
+.sidebar-group{
+    background-color: var(--mainDark);
+    padding:10px;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.am-expansion-item{
+    background-color: var(--mainLight);
+    padding: 10px;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
 .profile-info{
+    padding: 10px;
     color: var(--mainHighlight);
 }
-
 
 /* ------------------------------------------------------------------------------ */
 /* Views */
@@ -115,7 +133,24 @@ html[no-glass], .q-page {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-
+.album-details{
+    background-color: var(--mainDark);
+    padding: 10px;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+/* Search Results */
+.q-mb-lg{
+    padding: 10px;
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.mediaitem-topresult{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
 
 /* ------------------------------------------------------------------------------ */
 /* Library */
@@ -184,6 +219,7 @@ html[no-glass], .q-page {
 #_top-search{
     box-shadow: 3px 3px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
+    cursor: text;
 }
 .header-search-results{
     padding: 10px;
