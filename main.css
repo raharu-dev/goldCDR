@@ -31,7 +31,7 @@
  .mediaitem-card, .settings-sidebar-item, .c-select, .search-box_container, .cSearch, .compact-box,
  .category-brick, .category-brick-artwork, .artwork, .sidebar-artwork, .powerswoosh, .shelf-navigation,
  .q-item, .q-list, .profile-tab, .profile-btn, .profile-artwork, .c-listitem-short, .content-title, .mood-item, .mood-artwork,
-  .album-artwork {
+  .album-artwork, .q-input.c-select, .q-field__control, .q-select.c-select, .c-input--element, .ri-list-item {
     --glassFilter: none;
     backdrop-filter: none;
     --windowRadius: 0px;
@@ -72,18 +72,15 @@ html[no-glass], .q-page {
 }
 /* Pop Ups */
 .settings-window, .cider-dialog-window, .cider-dialog-window--generic{
-    box-shadow: 5px 5px 0px var(--shadeLight) inset,
-    -5px -5px 0px var(--shadeDark) inset;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
 }
 /* Profile Button at the bottom */
 .profile-info{
     color: var(--mainHighlight);
 }
-/* Other themeing stuff */
-.artwork{
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-}
+
+/* MAIN PAGE */
 .item-set{
     padding:10px;
     gap:10px;
@@ -93,6 +90,32 @@ html[no-glass], .q-page {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
+
+/* ARTISTS TAB */
+.artist-drawer-content{
+    gap: 10px;
+    display: flow;
+}
+
+
+/* Album / Playlist VIEW */
+.tracks-list, .ri-shelf{
+    padding: 10px;
+    gap: 10px;
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.ri-list-item{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.album-artwork::after{
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+
 /* ------------------------------------------------------------------------------ */
 /* INTERACTABLES */
 /* ------------------------------------------------------------------------------ */
@@ -122,13 +145,32 @@ html[no-glass], .q-page {
 /* Selectboxes and TextBoxes*/
 .c-select, .cSearch{
     background-color: var(--mainDark);
-    box-shadow: 3px 3px 0px var(--shadeDark) inset,
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
         -2px -2px 0px var(--shadeLight) inset;
 }
+/* SearchBox at the top */
+#_top-search{
+    box-shadow: 3px 3px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.header-search-results{
+    padding: 10px;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.header-search-item{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+
 /* Selections */
 .q-item {
     background-color: var(--mainLight);
     cursor: default;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
 }
 /* .q-list {
     padding: 10px;
