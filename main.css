@@ -225,19 +225,6 @@ html[no-glass] {
     box-shadow: none;
     padding: 0px;
 }
-/* Making Menu div invisible because I believe somewhere it was a button now it is a div with a button (UNSURE) */
-.menu[data-v-a8f725ef]{
-    background-color: transparent;
-    box-shadow: none;
-}
-.menu[data-v-a8f725ef]:hover{
-    background-color: transparent;
-    box-shadow: none;
-}
-.menu[data-v-a8f725ef]:active{
-    background-color: transparent;
-    box-shadow: none;
-}
 /* SETTINGS VIEW */
 .settings-sidebar-search, .settings-sidebar-items {
     background-color: transparent;
@@ -292,21 +279,21 @@ html[no-glass] {
 
 /* Buttons */
 .q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn,
- .settings-sidebar-item, .profile-btn, .c-listitem-short, .playback-action-button,
- .menu, .play, .ion-ios-close, .menu-btn{
+    .settings-sidebar-item, .profile-btn, .c-listitem-short, .playback-action-button,
+    .play, .ion-ios-close, .menu-btn{
     background-color: var(--mainLight);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover,
- .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover, .playback-action-button:hover,
- .menu:hover, .play:hover, .ion-ios-close:hover, .menu-btn:hover{
+    .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover, .playback-action-button:hover,
+    .play:hover, .ion-ios-close:hover, .menu-btn:hover{
     background-color: var(--mainDark);
     cursor: default;
 }
 .q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active,
- .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active, .playback-action-button:active,
- .menu:active, .play:active, .ion-ios-close:active, .menu-btn:active{
+    .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active, .playback-action-button:active,
+    .play:active, .ion-ios-close:active, .menu-btn:active{
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
