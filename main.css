@@ -1,0 +1,156 @@
+/* goldCDR */
+
+/* ------------------------------------------------------------------------------ */
+/* Variables for easy edit */
+/* ------------------------------------------------------------------------------ */
+
+:root {
+    /* Main theme colors */
+    --mainLight: #4C5844!important;
+    --mainDark: #3F4738;
+    --textMain: #EFF6EE;
+    --mainHighlight: #D5BD32;
+
+    /* Colors used for box shading */
+    --shadeLight: #7E8975;
+    --shadeDark: #2C3725;
+
+    /* Other / Experimental */
+    --mainHighlight-rgb: 213, 189, 50;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/* GETTING RID OF THE MODERN STYLE */
+/* ------------------------------------------------------------------------------ */
+
+/* Disabling the blur and roundness on most elements*/
+:root, body, .settings-sidebar-search, .content-area, .modal-titlebar, .settings-title-bar,
+ .cider-dialog-window, .settings-window, .cider-dialog-window--generic, .q-page-container,
+ .new-shell-page-container, .q-btn, .sidebar_nav-btn, .sidebar-playlist, .more-btn, body[density="desktop"] .sidebar_nav-btn,
+ .mediaitem-card, .settings-sidebar-item, .c-select, .search-box_container, .cSearch, .compact-box,
+ .category-brick, .category-brick-artwork, .artwork, .sidebar-artwork, .powerswoosh, .shelf-navigation,
+ .q-item, .q-list, .profile-tab, .profile-btn, .profile-artwork, .c-listitem-short, .content-title, .mood-item, .mood-artwork,
+  .album-artwork {
+    --glassFilter: none;
+    backdrop-filter: none;
+    --windowRadius: 0px;
+    --genericBorderRadius: 0px;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    --radius: 0px;
+    cursor: default;
+}
+/* Hiding Elements */
+.selection-indicator{
+    display: none;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ACTUAL THEMEING */
+/* ------------------------------------------------------------------------------ */
+
+/* Accent Color */
+body {
+  --keyColor: var(--mainHighlight);
+  --musicKeyColor: var(--mainHighlight);
+  --accent-color: var(--mainHighlight);
+  --keyColor-rgb: var(--mainHighlight-rgb);
+}
+body.body--dark, body.body--light {
+  --q-primary: var(--mainHighlight, --mainHighlight);
+}
+
+/* Make most of the parts by default the mainLight color */
+:root{
+    --q-dark: var(--mainLight);
+}
+
+/* Main background */
+html[no-glass], .q-page {
+    background-color: var(--mainLight);
+}
+/* Pop Ups */
+.settings-window, .cider-dialog-window, .cider-dialog-window--generic{
+    box-shadow: 5px 5px 0px var(--shadeLight) inset,
+    -5px -5px 0px var(--shadeDark) inset;
+}
+/* Profile Button at the bottom */
+.profile-info{
+    color: var(--mainHighlight);
+}
+/* Other themeing stuff */
+.artwork{
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.item-set{
+    padding:10px;
+    gap:10px;
+}
+.c-listitem-short{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+/* ------------------------------------------------------------------------------ */
+/* INTERACTABLES */
+/* ------------------------------------------------------------------------------ */
+
+/* Buttons */
+.q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn, .settings-sidebar-item, .profile-btn, .c-listitem-short{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover, .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover{
+    background-color: var(--mainDark);
+    cursor: default;
+}
+.q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active, .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active{
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+
+/* Buttons with images */
+.category-brick {
+    cursor: default;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+
+/* Selectboxes and TextBoxes*/
+.c-select, .cSearch{
+    background-color: var(--mainDark);
+    box-shadow: 3px 3px 0px var(--shadeDark) inset,
+        -2px -2px 0px var(--shadeLight) inset;
+}
+/* Selections */
+.q-item {
+    background-color: var(--mainLight);
+    cursor: default;
+}
+/* .q-list {
+    padding: 10px;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+} */
+/* Checkboxes */
+input[type=checkbox][switch] {
+    border-radius: 0px;
+    cursor: default;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+input[type=checkbox][switch]:before{
+    border-radius: 0px;
+}
+.item-set, .mood-item{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.mediaitem-shelf-content{
+    padding-right: 20px;
+}
