@@ -15,9 +15,9 @@ for example you can do:
 `%appdata%\sh.cider.dotnet\themes\3`
 
 ## Screenshots
-![Screenshot 1](./screenshots/1.jpg)
-![Screenshot 2](./screenshots/2.jpg)
-![Screenshot 3](./screenshots/3.jpg)
+![Screenshot 1](./assets/1.jpg)
+![Screenshot 2](./assets/2.jpg)
+![Screenshot 3](./assets/3.jpg)
 
 ## Annotation
 I Believe HLX

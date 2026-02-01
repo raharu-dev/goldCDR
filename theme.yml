@@ -3,3 +3,6 @@ stylesheets:
   - file: main.css
     name: Main Stylesheet
     description: The main stylesheet for the theme
+  - file: disableambience.css
+    name: Disable Ambience
+    description: Disables the cool ambience on Album/Playlist view
