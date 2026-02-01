@@ -14,6 +14,20 @@ Download the zip create a directory with a number as it name and put it to the:
 for example you can do:
 `%appdata%\sh.cider.dotnet\themes\3`
 
+## Recommended settings
+Those are recommended settings for best experience other ones might be better supported in future.
+### Visual
+#### General
+    - Window Vibrancy: None
+    - Layout Type: Mojave
+    - Player Type: Compact
+    - UI Size Profile: Desktop
+#### Color Customization
+    - Use Immersive Background: OFF
+#### Content Preferences
+    - Use Editorial Layout: OFF
+
+
 ## Screenshots
 ![Screenshot 1](./assets/1.jpg)
 ![Screenshot 2](./assets/2.jpg)

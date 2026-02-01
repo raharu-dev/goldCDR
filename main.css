@@ -108,13 +108,20 @@ html[no-glass] {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-/* Profile Button at the left bottom */
+/* Sidebar on left */
+/* Current implementation is really scuffed, but it works and makes it all static looking */
 .sidebar-group{
-    background-color: var(--mainDark);
-    padding:10px;
+    /* background-color: var(--mainDark); */
+    padding-top:10px;
 }
-.sidebar-group::after{
+.sidebar-scroll-content{
+    background-color: var(--mainDark);
+    margin:10px;
+}
+.sidebar-scroll-content::after{ 
     content: "";
+    margin:10px;
+    margin-bottom: 65px;
     position: absolute;
     inset: 0;
     z-index: 2;
@@ -122,17 +129,13 @@ html[no-glass] {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-/* .sidebar-scroll-content{
-    background-color: var(--mainDark);
-    margin:10px;
-    padding-top: 10px;
-} */
 .am-expansion-item{
     background-color: var(--mainLight);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
+/* Profile Button at the left bottom */
 .profile-info{
     padding: 10px;
     color: var(--mainHighlight);
