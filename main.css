@@ -40,7 +40,9 @@
   .album-artwork, .q-input.c-select, .q-field__control, .q-select.c-select, .c-input--element, .ri-list-item, .library-song-item,
   .top-conatiner, .mediaitem-topresult, .mediaitem-topresult::after, .artworkContainer, .artworkLockup, .am-expansion-item,
   .album-header, .ios-style, .progress-container, .am-progress, .am-playback-actions, .shelf-artwork, .ri-shelf-item, .lockupControls,
-  .menu, .play, .menu-btn, .add, .powerswoosh-chin, .powerswoosh-chin-artwork, .controls {
+  .menu, .play, .menu-btn, .add, .powerswoosh-chin, .powerswoosh-chin-artwork, .controls, .player, .player-artwork, .chrome-button,
+  .q-expansion-item, button, .header-frow, .queue-item, .artwork[data-v-3d901d75]::after, .playlist-suggestion-card,
+  .track-artwork, .track-artwork--image, .liveradio-item, .immersive-tabs, .q-tab, .chip-artwork {
     --glassFilter: none;
     backdrop-filter: none;
     --windowRadius: 0px;
@@ -56,8 +58,128 @@
 .selection-indicator{
     display: none;
 }
-.powerswoosh-chin{
-    background-color: transparent;
+/* ------------------------------------------------------------------------------ */
+/* INTERACTABLES */
+/* ------------------------------------------------------------------------------ */
+/* Notes on buttons
+.menu[data-v-a0ad662b] - Menu button on Library>Albums
+.ri-list-item - Library>Albums, song from list
+*/
+/* Buttons */
+.q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn,
+    .settings-sidebar-item, .profile-btn, .c-listitem-short, .playback-action-button,
+    .play, .ion-ios-close, .menu-btn, .menu[data-v-a0ad662b], .ri-list-item, .chrome-button,
+    button[data-v-031fce46]
+    {
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover,
+    .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover, .playback-action-button:hover,
+    .play:hover, .ion-ios-close:hover, .menu-btn:hover, .menu[data-v-a0ad662b]:hover, .ri-list-item:hover, .chrome-button:hover,
+    button[data-v-031fce46]:hover
+    {
+    background-color: var(--mainDark);
+    cursor: default;
+}
+.q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active,
+    .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active, .playback-action-button:active,
+    .play:active, .ion-ios-close:active, .menu-btn:active, .menu[data-v-a0ad662b]:active, .ri-list-item:active, .chrome-button:active,
+    button[data-v-031fce46]:active
+    {
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+
+/* Buttons with images */
+.category-brick {
+    cursor: default;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+
+/* Selectboxes and TextBoxes*/
+.c-select, .cSearch, .q-field__control{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+        -2px -2px 0px var(--shadeLight) inset;
+}
+/* TextBoxes */
+.c-input, .c-input-container{
+    cursor: text;
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+/* SearchBox at the top */
+#_top-search{
+    box-shadow: 3px 3px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+    cursor: text;
+}
+.header-search-results{
+    padding: 10px;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.header-search-results::after{
+    padding: 100px;
+    background-color: var(--mainDark);
+}
+
+.header-search-item{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+
+/* Selections */
+.q-item {
+    margin: 10px 0px;
+    background-color: var(--mainLight);
+    cursor: default;
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+/* .q-list {
+    padding: 10px;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+} */
+/* Checkboxes */
+input[type=checkbox][switch] {
+    border-radius: 0px;
+    cursor: default;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+input[type=checkbox][switch]:before{
+    border-radius: 0px;
+}
+
+.mediaitem-shelf-content{
+    padding-right: 20px;
+}
+/* The big boxes with icons in HOME and NEWS i.e. Top Picks for You*/
+/* Most of the items anywhere with Artwork And Text */
+.item-set{ 
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+    background-color: var(--mainLight);
+    padding:10px;
+}
+/* Select boxes (like the ones in settings) */
+option{
+    background-color: var(--mainLight);
+}
+option:hover{
+    background-color: var(--mainDark);
+}
+option::checkmark{
+    color:var(--mainHighlight)
 }
 /* ------------------------------------------------------------------------------ */
 /* General Themeing */
@@ -95,19 +217,25 @@ html[no-glass] {
     -2px -2px 0px var(--shadeLight) inset;
 }
 /* Pop Ups */
+.cider-dialog-window{
+    background-color: var(--mainLight);
+}
+/* Settings */
 .settings-window, .cider-dialog-window, .cider-dialog-window--generic{
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
+.q-expansion-item__content, .settings-qlist{
+    background-color: transparent;
+}
+.q-expansion-item__border{
+    display: none;
+    opacity: 0;
+}
 
 /* ------------------------------------------------------------------------------ */
-/* Main Page / View */
+/* Main Page / View; The things visible 24/7 */
 /* ------------------------------------------------------------------------------ */
-.c-listitem-short{
-    background-color: var(--mainDark);
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-}
 /* Sidebar on left */
 /* Current implementation is really scuffed, but it works and makes it all static looking */
 .sidebar-group{
@@ -129,11 +257,20 @@ html[no-glass] {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-.am-expansion-item{
+/* Groups from sidebar */
+.am-expansion-item{ 
     background-color: var(--mainLight);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
+}
+.am-expansion-item:hover{
+    background-color: var(--mainDark);
+}
+.am-expansion-item:active{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
 }
 /* Profile Button at the left bottom */
 .profile-info{
@@ -154,10 +291,31 @@ html[no-glass] {
 }
 .am-playback-actions{
     margin:0;
-    align-items: flex-start;
-    display: flex;
+    opacity: 1;
     padding-bottom: 5px;
 }
+.player{
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.player-info{
+    color: var(--mainHighlight);
+}
+input[data-v-02f8a987], input[data-v-5887f795]{
+    background-color: var(--mainDark);
+    --progressColor: var(--mainHighlight);
+    border-radius: 0;
+    height: 10px;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-slider-thumb{
+    border-radius: 0;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+
 /* ------------------------------------------------------------------------------ */
 /* Views */
 /* ------------------------------------------------------------------------------ */
@@ -165,7 +323,12 @@ html[no-glass] {
 /* ----------------------------------------*/
 /* HOME */
 /* ----------------------------------------*/
-.artwork[data-v-0888a670]::after{ /* Artwork inside Album/Playlist */
+/* Outline when hovering over shelf-navigation i.e. Top Picks For You, Recently Played (those arrows to scroll) */
+.shelf-navigation::before{
+    border-radius: 0px;
+}
+/* Artwork inside Album/Playlist */
+.artwork[data-v-0888a670]::after{ 
     content: "";
     position: absolute;
     inset: 0;
@@ -174,10 +337,13 @@ html[no-glass] {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
-.powerswoosh-chin{
+/* i.e. Top Picks For You, the bottom part where there is text */
+.powerswoosh-chin{ 
     padding-top:10px;
+    background-color: transparent;
 }
-.powerswoosh-chin-artwork{
+/* i.e. Top Picks For You, albums and playlists */
+.powerswoosh-chin-artwork{ 
     margin-top:10px;
     background-color:  var(--mainDark);
     background-image: none;
@@ -209,6 +375,12 @@ html[no-glass] {
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
     color: var(--mainHighlight)
+}
+.ri-list-item.selected[data-v-6e9a3857]{ /* Kind of broken */
+    /* --keyColor: var(--mainLight); */
+    --keyColor: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
 }
 .album-details{
     background-color: var(--mainLight);
@@ -253,6 +425,66 @@ html[no-glass] {
     --backgroundGradient: none;
     --textColor1: var(--mainWhite);
 }
+/* Suggestions at the bottom */
+.playlist-suggestion-card{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.q-item-type[data-v-3a356767]{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.artwork[data-v-388ad613]::after{
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.track-artwork::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+/* Description of an album */
+.curator-content{
+    background-color: var(--mainDark);
+    margin: 10px;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.metadata-list{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+    padding-left:10px;
+    padding-right:10px;
+}
+.q-img__container::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+.text-grey-5{
+    color: var(--mainWhite);
+    opacity: 1;
+}
+/* ----------------------------------------*/
+/* EMPTY SEARCH */
+/* ----------------------------------------*/
+.artwork[data-v-3d901d75]::after{
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
 /* ----------------------------------------*/
 /* SEARCH RESULTS VIEW */
 /* ----------------------------------------*/
@@ -267,6 +499,25 @@ html[no-glass] {
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
+/* Header with: i.e. "Top Results" --- "Arrows" */
+.shelf-header{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+/* Playlists results */
+/* Fixing Double Playlists in one */
+/* It is pretty hard because there are some limits on size */
+/* .item-set[data-v-1b6d3540]{
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0px;
+}
+.mediaitem-card{
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--mainLight);
+} */
+
 /* ----------------------------------------*/
 /* ARTIST VIEW */
 /* ----------------------------------------*/
@@ -286,9 +537,68 @@ html[no-glass] {
 }
 .settings-page-bounds{
     margin: 39px 10px 10px 10px;
+    padding:0;
+    background-color: var(--mainDark);
+}
+.settings-page-bounds::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
+}
+.settings-qlist{
+    padding-bottom: 10px;
+}
+/* Currently selected item on settings sidebar */
+/* This might overlap with other elements */
+.selected, .settings-sidebar-item.selected[data-v-6015df9e]{ 
+    transform: translate(0px);
     background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+}
+/* ----------------------------------------*/
+/* Immersive View */
+/* ----------------------------------------*/
+.immersive-grid{
+    background-color: var(--mainLight);
+}
+/* Items in queue (probably overlap) */
+.queue-item{
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+/* Right side of this mode */
+.immersive-tab{
+    background-color: var(--mainDark);
+        box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
+    padding:10px;
+}
+.lyric-line{
+    margin:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--mainLight);
+    box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+    /* Breaks with japanese */
+    /* color: var(--mainHighlight);  */
+}
+/* The three icons that appear when hovered on right side */
+.immersive-tabs{
+    background-color: var(--mainLight);
+        box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
+.q-tab--active{
+    background-color: var(--mainDark);
+    box-shadow: 2px 2px 0px var(--shadeDark) inset,
+    -2px -2px 0px var(--shadeLight) inset;
 }
 /* ------------------------------------------------------------------------------ */
 /* Library */
@@ -303,6 +613,11 @@ html[no-glass] {
 /* ----------------------------------------*/
 /* SONGS TAB */
 /* ----------------------------------------*/
+.header-frow{
+    background-color: var(--mainLight);
+        box-shadow: 2px 2px 0px var(--shadeLight) inset,
+    -2px -2px 0px var(--shadeDark) inset;
+}
 .library-songs-view{
     background-color: var(--mainDark);
     padding: 10px;
@@ -373,107 +688,5 @@ html[no-glass] {
     padding-bottom: 15px;
     padding-top: 10px;
 }
-/* ------------------------------------------------------------------------------ */
-/* INTERACTABLES */
-/* ------------------------------------------------------------------------------ */
-/* Notes on buttons
-.menu[data-v-a0ad662b] - Menu button on Library>Albums
-.ri-list-item - Library>Albums, song from list
-*/
 
 
-/* Buttons */
-.q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn,
-    .settings-sidebar-item, .profile-btn, .c-listitem-short, .playback-action-button,
-    .play, .ion-ios-close, .menu-btn, .menu[data-v-a0ad662b], .ri-list-item{
-    background-color: var(--mainLight);
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-}
-.q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover,
-    .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover, .playback-action-button:hover,
-    .play:hover, .ion-ios-close:hover, .menu-btn:hover, .menu[data-v-a0ad662b]:hover, .ri-list-item:hover{
-    background-color: var(--mainDark);
-    cursor: default;
-}
-.q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active,
-    .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active, .playback-action-button:active,
-    .play:active, .ion-ios-close:active, .menu-btn:active, .menu[data-v-a0ad662b]:active, .ri-list-item:active{
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-}
-
-/* Buttons with images */
-.category-brick {
-    cursor: default;
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-}
-
-/* Selectboxes and TextBoxes*/
-.c-select, .cSearch, .c-input-container, .q-field__control{
-    background-color: var(--mainDark);
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-        -2px -2px 0px var(--shadeLight) inset;
-}
-/* SearchBox at the top */
-#_top-search{
-    box-shadow: 3px 3px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-    cursor: text;
-}
-.header-search-results{
-    padding: 10px;
-    background-color: var(--mainLight);
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-}
-.header-search-item{
-    background-color: var(--mainLight);
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-}
-
-/* Selections */
-.q-item {
-    margin: 10px 0px;
-    background-color: var(--mainLight);
-    cursor: default;
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-}
-/* .q-list {
-    padding: 10px;
-    background-color: var(--mainLight);
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-} */
-/* Checkboxes */
-input[type=checkbox][switch] {
-    border-radius: 0px;
-    cursor: default;
-    box-shadow: 2px 2px 0px var(--shadeDark) inset,
-    -2px -2px 0px var(--shadeLight) inset;
-}
-input[type=checkbox][switch]:before{
-    border-radius: 0px;
-}
-
-.mediaitem-shelf-content{
-    padding-right: 20px;
-}
-.item-set{ /* The big boxes with icons in HOME and NEWS i.e. Top Picks for You*/
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-    background-color: var(--mainLight);
-    padding:10px;
-}
-
-
-
-/* ???*/
-/* .mood-item{
-    background-color: var(--mainLight);
-    box-shadow: 2px 2px 0px var(--shadeLight) inset,
-    -2px -2px 0px var(--shadeDark) inset;
-} */

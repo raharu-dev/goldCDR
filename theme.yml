@@ -1,8 +1,8 @@
-name: goldCDR
+name: GoldCDR
 stylesheets:
   - file: main.css
-    name: Main Stylesheet
-    description: The main stylesheet for the theme
+    name: GoldCDR
+    description: The GoldSRC inspired theme [Please use recommended settings] 😉
   - file: disableambience.css
     name: Disable Ambience
-    description: Disables the cool ambience on Album/Playlist view
+    description: Disables the ambient background on Album/Playlist view
