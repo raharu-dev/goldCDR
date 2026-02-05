@@ -42,7 +42,7 @@
   .album-header, .ios-style, .progress-container, .am-progress, .am-playback-actions, .shelf-artwork, .ri-shelf-item, .lockupControls,
   .menu, .play, .menu-btn, .add, .powerswoosh-chin, .powerswoosh-chin-artwork, .controls, .player, .player-artwork, .chrome-button,
   .q-expansion-item, button, .header-frow, .queue-item, .artwork[data-v-3d901d75]::after, .playlist-suggestion-card,
-  .track-artwork, .track-artwork--image, .liveradio-item, .immersive-tabs, .q-tab, .chip-artwork {
+  .track-artwork, .track-artwork--image, .liveradio-item, .immersive-tabs, .q-tab, .chip-artwork, .social-overlay-content, .socialOverlay, .add-to-library-btn {
     --glassFilter: none;
     backdrop-filter: none;
     --windowRadius: 0px;
@@ -64,12 +64,13 @@
 /* Notes on buttons
 .menu[data-v-a0ad662b] - Menu button on Library>Albums
 .ri-list-item - Library>Albums, song from list
+.play-btn - Button to play on artist page
 */
 /* Buttons */
 .q-btn, .sidebar_nav-btn, .more-btn, body[density="desktop"] .sidebar_nav-btn,
     .settings-sidebar-item, .profile-btn, .c-listitem-short, .playback-action-button,
     .play, .ion-ios-close, .menu-btn, .menu[data-v-a0ad662b], .ri-list-item, .chrome-button,
-    button[data-v-031fce46]
+    button[data-v-031fce46], .play-btn[data-v-213e74d2], .add-to-library-btn
     {
     background-color: var(--mainLight);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
@@ -78,7 +79,7 @@
 .q-btn:hover, .sidebar_nav-btn:hover, .more-btn:hover, body[density="desktop"] .sidebar_nav-btn:hover,
     .settings-sidebar-item:hover, .profile-btn:hover, .c-listitem-short:hover, .playback-action-button:hover,
     .play:hover, .ion-ios-close:hover, .menu-btn:hover, .menu[data-v-a0ad662b]:hover, .ri-list-item:hover, .chrome-button:hover,
-    button[data-v-031fce46]:hover
+    button[data-v-031fce46]:hover, .play-btn[data-v-213e74d2]:hover, .add-to-library-btn:hover
     {
     background-color: var(--mainDark);
     cursor: default;
@@ -86,7 +87,7 @@
 .q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active,
     .settings-sidebar-item:active, .profile-btn:active, .c-listitem-short:active, .playback-action-button:active,
     .play:active, .ion-ios-close:active, .menu-btn:active, .menu[data-v-a0ad662b]:active, .ri-list-item:active, .chrome-button:active,
-    button[data-v-031fce46]:active
+    button[data-v-031fce46]:active, .play-btn[data-v-213e74d2]active, .add-to-library-btn:active
     {
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
@@ -528,6 +529,9 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
     background-color: transparent;
     box-shadow: none;
     padding: 0px;
+}
+.play-btn, .more-btn{
+    color: var(--mainHighlight);
 }
 /* ----------------------------------------*/
 /* SETTINGS VIEW */

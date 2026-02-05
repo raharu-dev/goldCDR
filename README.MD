@@ -3,6 +3,11 @@
 ## Description
 Imagine if [Cider](https://cider.sh/) was made in GoldSRC
 This theme is Cider theme inspired by the old GoldSRC aesthetics (like Half-Life or CS 1.6)
+## Roadmap
+1. Initial Release <- We are here
+2. Linux (an proably other OS's) hotfix
+3. Rewrite (basically from scratch)
+4. Polishment and new features (support for more Layouts and new experimental stuff)
 ## Installation
 ### Marketplace
 Go to options, Extensions then Themes and there you can press "Get More Themes" in order to find it on the official Cider Marketplace.
