@@ -58,6 +58,12 @@
 .selection-indicator{
     display: none;
 }
+
+/* Windows vibrancy fix so it will always work */
+.root-layout-container{
+    background-color: var(--mainLight);
+} 
+
 /* ------------------------------------------------------------------------------ */
 /* INTERACTABLES */
 /* ------------------------------------------------------------------------------ */
