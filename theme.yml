@@ -8,10 +8,10 @@ stylesheets:
     description: Disables the ambient background on Album/Playlist view
   - file: cs_95.css
     name: 95 Color Scheme
-    description: Changes the colors of GoldCDR to look more like windows 95 theme
+    description: Changes the colors of GoldCDR to look more like Windows 95 theme
   - file: cs_oled.css 
     name: OLED Color Scheme
     description: Changes the colors to more modern OLED high contrast theme if you like the style but not the colors
-  - file: cs_transparentoled.css 
-    name: Transparent OLED Color Scheme
-    description: Changes the colors to more modern OLED high contrast theme with transparency added
+  - file: cs_transparent.css 
+    name: Color Scheme with transparency in mind
+    description: Changes the theme to work well with transparency

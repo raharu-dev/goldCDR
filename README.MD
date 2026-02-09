@@ -44,5 +44,17 @@ Those are recommended settings for best experience other ones might be better su
 ![Screenshot 3](./assets/3.jpg)
 ![Screenshot 4](./assets/4.jpg)
 ![Screenshot 5](./assets/5.jpg)
+### Additional Color Schemes
+Windows 95 inspired Color Scheme.
+---
+![Screenshot of Windows 95 inspired color scheme](./assets/cs_95.jpg)
+
+OLED Color Scheme
+---
+![Screenshot of OLED color scheme](./assets/cs_oled.jpg)
+
+Transparent Color Scheme
+---
+![Screenshot of Transparent color scheme](./assets/cs_transparent.jpg)
 ## Annotation
 I Believe HLX

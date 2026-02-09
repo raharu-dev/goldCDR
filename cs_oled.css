@@ -8,7 +8,4 @@
     /* Colors used for box shading */
     --shadeLight: rgb(100, 100, 100);
     --shadeDark: rgb(100, 100, 100);
-
-    /* Other / Experimental */
-    --mainHighlight-rgb: 213, 189, 50;
 }

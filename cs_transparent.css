@@ -8,9 +8,6 @@
     /* Colors used for box shading */
     --shadeLight: rgba(100, 100, 100, 0.1);
     --shadeDark: rgba(100, 100, 100, 0.1);
-
-    /* Other / Experimental */
-    --mainHighlight-rgb: 213, 189, 50;
 }
 
 /* Fix for popups */
