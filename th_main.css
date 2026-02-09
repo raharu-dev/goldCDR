@@ -12,7 +12,7 @@
 
 :root {
     /* Main theme colors */
-    --mainLight: #4C5844!important;
+    --mainLight: #4C5844;
     --mainDark: #3F4738;
     --mainWhite: #EFF6EE;
     --mainHighlight: #D5BD32;

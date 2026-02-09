@@ -1,0 +1,19 @@
+:root {
+    /* Main theme colors */
+    --mainLight: rgba(0, 0, 0, 0.1);
+    --mainDark: rgba(0, 0, 0, 0.1);
+    --mainWhite: #ffffff;
+    /* --mainHighlight: #ff0000; */
+
+    /* Colors used for box shading */
+    --shadeLight: rgba(100, 100, 100, 0.1);
+    --shadeDark: rgba(100, 100, 100, 0.1);
+
+    /* Other / Experimental */
+    --mainHighlight-rgb: 213, 189, 50;
+}
+
+/* Fix for popups */
+.cider-dialog-window, .am-audio-settings{
+    background-color: black;
+}

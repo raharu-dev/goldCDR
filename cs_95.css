@@ -1,0 +1,14 @@
+:root {
+    /* Main theme colors */
+    --mainLight: #c0c0c0;
+    --mainDark: #808080;
+    --mainWhite: #242424;
+    --mainHighlight: #000080;
+
+    /* Colors used for box shading */
+    --shadeLight: #ffffff;
+    --shadeDark: #585858;
+
+    /* Other / Experimental */
+    --mainHighlight-rgb: 213, 189, 50;
+}
