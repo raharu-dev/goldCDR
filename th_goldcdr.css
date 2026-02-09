@@ -1,11 +1,15 @@
 /* ------------------------------------------------------------------------------
-/* Introduction
+/* X. Introduction
 /* ------------------------------------------------------------------------------
 New rewritten more capable version of the style
 Also better documented, possibly more efficient
 
 In order to search for something try hitting CTRL+F
-and search for Y. it should contain most of the main categories */
+and search for:
+    X. - Main Category
+    Y. - Sub Category
+    Z. - Sub Sub Category
+*/
 
 /* New Screenshots mode */
 /* Replaces username with raharu-dev */
@@ -21,7 +25,7 @@ and search for Y. it should contain most of the main categories */
 } */
 
 /* ------------------------------------------------------------------------------ */
-/* Y. Variables
+/* X. Variables
 /* ------------------------------------------------------------------------------ */
 :root {
     /* Main theme colors */
@@ -40,37 +44,127 @@ and search for Y. it should contain most of the main categories */
         2px 2px 0px var(--shadeLight) inset,
         -2px -2px 0px var(--shadeDark) inset;
     --shadowInner:
-        box-shadow: 2px 2px 0px var(--shadeDark) inset,
+        2px 2px 0px var(--shadeDark) inset,
         -2px -2px 0px var(--shadeLight) inset;
 }
-
-
 /* ------------------------------------------------------------------------------ */
+/* X. General Styling, things that you see all the time. And things that might work or not.
+/* ------------------------------------------------------------------------------ */
+/* Disabling all of the default styling */
+*{
+    /* Round Corners */
+    border-radius: 0;
+    /* Cursor: Pointer */
+    cursor: default;
+    /* All of the default background that makes the theme darker or lighter for no reason */
+    background: none;
+    /* Default shadows on many items */
+    box-shadow: none;
+    /* Blurred backgrounds on certain elements */
+    backdrop-filter: none;
+}
+:root{
+    --mediaItemRadiusXSmall: 0;
+    --mediaItemRadiusSmall: 0;
+    --mediaItemRadiusMedium: 0;
+    --mediaItemRadiusLarge: 0;
+    --mediaItemRadiusRound: 0;
+    --appBorderRadius: 0;
+    --borderRadiusNone: 0;
+    --borderRadiusSmall: 0;
+    --borderRadiusMedium: 0;
+    --borderRadiusLarge: 0;
+    --borderRadiusXLarge: 0;
+    --genericBorderRadius: 0px;
+}
+/* Changing the background of the app window */
+.root-layout-container{
+    background-color: var(--mainPrimary);
+}
+.absolute-full{
+    border: 2px solid var(--shadeDark);
+    border-right-color: var(--shadeLight);
+    border-bottom-color: var(--shadeLight);
+}
+.q-page{
+    background-color: var(--mainSecondary);
+}
+
+/* -------------------------------------------------------- */
 /* Y. Elements with outset shadow styling
-/* ------------------------------------------------------------------------------ */
-/* SIDEBAR */
+/* -------------------------------------------------------- */
+
+/* ------------------------- */
+/* Z. SIDEBAR
+/* ------------------------- */
 .profile-btn, /* Profile Button on left side of the screen */
 .sidebar_nav-btn, /* Smaller buttons on the sidebar, works only with "UI Size Profile: Default"*/
 body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however works only "UI Size Profile: Desktop", border-radius is overwritten*/
-/* ALBUM / PLAYLIST */
+/* ------------------------- */
+/* Z. ALBUM / PLAYLIST
+/* ------------------------- */
 
-/* MIXED */
+
+/* ------------------------- */
+/* Z. SETTINGS
+/* ------------------------- */
+.settings-window, /* Main Settings window with all the things inside of it. */
+
+/* ------------------------- */
+/* Z. MIXED
+/* ------------------------- */
 .q-btn, /* Standard Buttons, many of the small ones at HOME, few on SETTINGS, few on views like Library->Albums ("Show in Apple Music") */
 .ri-list-item, /* Songs on Album, Playlist, Libary->Albums, Library->Artists */
-.shadowOuter{
+.am-audio-settings, /* The window where you can set equalizer etc. */
+.shadowOuterCLASS{
     background-color: var(--mainPrimary);
     border-radius: 0px;
     border: 2px solid var(--shadeLight);
     border-right-color: var(--shadeDark);
     border-bottom-color: var(--shadeDark);
 }
-/* ------------------------------------------------------------------------------ */
+/* -------------------------------------------------------- */
 /* Y. Elements with inset shadow styling
-/* ------------------------------------------------------------------------------ */
-.shadowInner{
-    background-color: var(--mainPrimary);
+/* -------------------------------------------------------- */
+
+/* ------------------------- */
+/* Z. SIDEBAR
+/* ------------------------- */
+.sidebar-scroll-content, 
+/* ------------------------- */
+/* Z. MIXED
+/* ------------------------- */
+.artworkContainer, /* Container for most of the Covers (like on HOME, PLAYLISTS) */
+.shadowInnerCLASS{
+    background-color: var(--mainSecondary);
     border-radius: 0px;
-    border: 2px solid var(--shadeLight);
-    border-right-color: var(--shadeDark);
-    border-bottom-color: var(--shadeDark);
+    border: 2px solid var(--shadeDark);
+    border-right-color: var(--shadeLight);
+    border-bottom-color: var(--shadeLight);
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/* X. PAGES
+/* ------------------------------------------------------------------------------ */
+/* -------------------------------------------------------- */
+/* Y. MAIN / MIXED - For items that might appear in multiple places
+/* -------------------------------------------------------- */
+.shelf-navigation::before{ /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
+    border-radius: 0;
+}
+/* -------------------------------------------------------- */
+/* Y. SETTINGS
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* Y. SIDEBAR
+/* -------------------------------------------------------- */
+.sidebar-scroll-content{ /* The box on sidebar with all of the things in it */
+    background-color: var(--mainSecondary);
+    margin:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.profile-tab{ /* Tab with Username*/
+    border: none;
 }
