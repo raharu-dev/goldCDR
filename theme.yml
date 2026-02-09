@@ -3,7 +3,7 @@ stylesheets:
   - file: th_main.css
     name: GoldCDR
     description: The GoldSRC inspired theme [Please use recommended settings] 😉
-  - file: disableambience.css
+  - file: mod_disableambience.css
     name: Disable Ambience
     description: Disables the ambient background on Album/Playlist view
   - file: cs_95.css
