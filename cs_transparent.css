@@ -1,8 +1,8 @@
 :root {
     /* Main theme colors */
-    --mainLight: rgba(0, 0, 0, 0.1);
-    --mainDark: rgba(0, 0, 0, 0.1);
-    --mainWhite: #ffffff;
+    --mainPrimary: rgba(0, 0, 0, 0.1);
+    --mainSecondary: rgba(0, 0, 0, 0.1);
+    --mainText: #ffffff;
     /* --mainHighlight: #ff0000; */
 
     /* Colors used for box shading */

@@ -24,6 +24,11 @@ and search for:
   line-height: normal;
 } */
 
+/* Important things to fix:
+- Overwriting the cursor made the cursor reising univisible
+- Overwriting *::before, *:hover has hide the controls at the top
+*/
+
 /* ------------------------------------------------------------------------------ */
 /* X. Variables
 /* ------------------------------------------------------------------------------ */
@@ -51,8 +56,8 @@ and search for:
 /* X. General Styling, things that you see all the time. And things that might work or not.
 /* ------------------------------------------------------------------------------ */
 /* Disabling all of the default styling */
-*{
-    /* Round Corners */
+*,*::before, *:hover{
+    /* Disabling rounded corners */
     border-radius: 0;
     /* Cursor: Pointer */
     cursor: default;
@@ -91,7 +96,7 @@ and search for:
 }
 
 /* -------------------------------------------------------- */
-/* Y. Elements with outset shadow styling
+/* Y. Elements with OUTSET shadow styling
 /* -------------------------------------------------------- */
 
 /* ------------------------- */
@@ -100,62 +105,58 @@ and search for:
 .profile-btn, /* Profile Button on left side of the screen */
 .sidebar_nav-btn, /* Smaller buttons on the sidebar, works only with "UI Size Profile: Default"*/
 body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however works only "UI Size Profile: Desktop", border-radius is overwritten*/
+.am-expansion-item, /* The expanding buttons with things like "Apple Music", "Library", "Playlists", etc. */
 /* ------------------------- */
-/* Z. ALBUM / PLAYLIST
-/* ------------------------- */
-
-
-/* ------------------------- */
-/* Z. SETTINGS
+/* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
 .settings-window, /* Main Settings window with all the things inside of it. */
-
-/* ------------------------- */
-/* Z. MIXED
-/* ------------------------- */
 .q-btn, /* Standard Buttons, many of the small ones at HOME, few on SETTINGS, few on views like Library->Albums ("Show in Apple Music") */
 .ri-list-item, /* Songs on Album, Playlist, Libary->Albums, Library->Artists */
 .am-audio-settings, /* The window where you can set equalizer etc. */
 .shadowOuterCLASS{
     background-color: var(--mainPrimary);
     border-radius: 0px;
-    border: 2px solid var(--shadeLight);
-    border-right-color: var(--shadeDark);
-    border-bottom-color: var(--shadeDark);
+    border: 2px solid;
+    border-color: var(--shadeLight) var(--shadeDark) var(--shadeDark) var(--shadeLight);
 }
 /* -------------------------------------------------------- */
-/* Y. Elements with inset shadow styling
+/* Y. Elements with INSET shadow styling
 /* -------------------------------------------------------- */
-
 /* ------------------------- */
-/* Z. SIDEBAR
-/* ------------------------- */
-.sidebar-scroll-content, 
-/* ------------------------- */
-/* Z. MIXED
+/* Z. Artwork
 /* ------------------------- */
 .artworkContainer, /* Container for most of the Covers (like on HOME, PLAYLISTS) */
+.album-artwork, /* Container for Covers inside of ALBUMS/PLAYLISTS */
+.player-artwork, /* Container for artwork inside of PLAYER at bottom*/
+.track-artwork, /* Container for artwork inside of PLAYLISTS/ALBUMS tracks */
+/* ------------------------- */
+/* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
+/* ------------------------- */
+.sidebar-scroll-content, 
+.settings-page-bounds, 
 .shadowInnerCLASS{
     background-color: var(--mainSecondary);
     border-radius: 0px;
-    border: 2px solid var(--shadeDark);
-    border-right-color: var(--shadeLight);
-    border-bottom-color: var(--shadeLight);
+    border: 2px solid;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
 }
-
-
 /* ------------------------------------------------------------------------------ */
 /* X. PAGES
 /* ------------------------------------------------------------------------------ */
 /* -------------------------------------------------------- */
 /* Y. MAIN / MIXED - For items that might appear in multiple places
 /* -------------------------------------------------------- */
-.shelf-navigation::before{ /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
-    border-radius: 0;
+.shelf-navigation:hover::before{ /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
+    border: 2px solid;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
 }
 /* -------------------------------------------------------- */
 /* Y. SETTINGS
 /* -------------------------------------------------------- */
+.settings-page-bounds{ /* The box containing the settings on the right side */
+    margin: 39px 10px 10px 10px;
+    padding:0;
+}
 /* -------------------------------------------------------- */
 /* Y. SIDEBAR
 /* -------------------------------------------------------- */
@@ -167,4 +168,10 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 }
 .profile-tab{ /* Tab with Username*/
     border: none;
+}
+.expansion-items{
+    align-items:center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
 }

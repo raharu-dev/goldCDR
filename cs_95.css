@@ -1,8 +1,8 @@
 :root {
     /* Main theme colors */
-    --mainLight: #c0c0c0;
-    --mainDark: #808080;
-    --mainWhite: #242424;
+    --mainPrimary: #c0c0c0;
+    --mainSecondary: #808080;
+    --mainText: #242424;
     --mainHighlight: #000080;
 
     /* Colors used for box shading */
