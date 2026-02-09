@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------------------------
+/* Introduction
+/* ------------------------------------------------------------------------------
+New rewritten more capable version of the style
+Also better documented, possibly more efficient
+
+In order to search for something try hitting CTRL+F
+and search for Y. it should contain most of the main categories */
+
+/* New Screenshots mode */
+/* Replaces username with raharu-dev */
+/* .profile-info {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+}
+.profile-info::after {
+  content: "raharu-dev";
+  font-size: 14px;
+  line-height: normal;
+} */
+
+/* ------------------------------------------------------------------------------ */
+/* Y. Variables
+/* ------------------------------------------------------------------------------ */
+:root {
+    /* Main theme colors */
+    --mainPrimary: #4C5844;
+    --mainSecondary: #3F4738;
+    --mainText: #EFF6EE;
+    --mainHighlight: #D5BD32;
+
+    /* Colors used for box shading */
+    --shadeLight: #7E8975;
+    --shadeDark: #2C3725;
+
+    /* Shadows */
+    /* Classic Shadows (previous solution)*/
+    --shadowOuter:
+        2px 2px 0px var(--shadeLight) inset,
+        -2px -2px 0px var(--shadeDark) inset;
+    --shadowInner:
+        box-shadow: 2px 2px 0px var(--shadeDark) inset,
+        -2px -2px 0px var(--shadeLight) inset;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/* Y. Elements with outset shadow styling
+/* ------------------------------------------------------------------------------ */
+/* SIDEBAR */
+.profile-btn, /* Profile Button on left side of the screen */
+.sidebar_nav-btn, /* Smaller buttons on the sidebar, works only with "UI Size Profile: Default"*/
+body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however works only "UI Size Profile: Desktop", border-radius is overwritten*/
+/* ALBUM / PLAYLIST */
+
+/* MIXED */
+.q-btn, /* Standard Buttons, many of the small ones at HOME, few on SETTINGS, few on views like Library->Albums ("Show in Apple Music") */
+.ri-list-item, /* Songs on Album, Playlist, Libary->Albums, Library->Artists */
+.shadowOuter{
+    background-color: var(--mainPrimary);
+    border-radius: 0px;
+    border: 2px solid var(--shadeLight);
+    border-right-color: var(--shadeDark);
+    border-bottom-color: var(--shadeDark);
+}
+/* ------------------------------------------------------------------------------ */
+/* Y. Elements with inset shadow styling
+/* ------------------------------------------------------------------------------ */
+.shadowInner{
+    background-color: var(--mainPrimary);
+    border-radius: 0px;
+    border: 2px solid var(--shadeLight);
+    border-right-color: var(--shadeDark);
+    border-bottom-color: var(--shadeDark);
+}

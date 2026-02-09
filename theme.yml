@@ -1,17 +1,35 @@
-name: GoldCDR
+name: goldCDR
 stylesheets:
+
+    # Themes
   - file: th_main.css
-    name: GoldCDR
-    description: The GoldSRC inspired theme [Please use recommended settings] 😉
+    name: Theme - GoldCDR
+    description: OLD styling file
+  - file: th_goldcdr.css
+    name: Theme - goldCDR
+    description: The main GoldSRC inspired theme. [Please use recommended settings] 😉
+
+    # Modifications to the theme
   - file: mod_disableambience.css
-    name: Disable Ambience
+    name: Mod - Disable Ambience
     description: Disables the ambient background on Album/Playlist view
+  - file: mod_uglyfonts.css
+    name: Mod - Ugly Fonts
+    description: Makes the usage of an old styled pixelated font (Probably only on Windows 🪟)
+  - file: mod_digiphys.css
+    name: Mod - Digital Physical 3D Effect
+    description: Adds a 3D effect to the covers
+  - file: mod_dithering.css
+    name: Mod - Cover Dithering
+    description: Adds a dithering effect on covers to make them look low res and old
+
+    # Color Schemes
   - file: cs_95.css
-    name: 95 Color Scheme
-    description: Changes the colors of GoldCDR to look more like Windows 95 theme
+    name: Color Scheme - 95
+    description: Changes the colors of goldCDR to look more like Windows 95 theme
   - file: cs_oled.css 
-    name: OLED Color Scheme
+    name: Color Scheme - OLED
     description: Changes the colors to more modern OLED high contrast theme if you like the style but not the colors
   - file: cs_transparent.css 
-    name: Color Scheme with transparency in mind
+    name: Color Scheme - Transparent
     description: Changes the theme to work well with transparency

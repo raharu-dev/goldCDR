@@ -1,0 +1,5 @@
+/* Overwrites the fonts with an Aliased retro font */
+.profile-info, body{
+    font-weight: bold;
+    font-family: "ＭＳ Ｐゴシック"
+}

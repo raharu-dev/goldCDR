@@ -1,8 +1,8 @@
 # goldCDR
 ![LOGO](./assets/LOGO.png)
 ## Description
-Imagine if [Cider](https://cider.sh/) was made in GoldSRC
-This theme is Cider theme inspired by the old GoldSRC aesthetics (like Half-Life or CS 1.6)
+Retro-modern reimagination of [Cider](https://cider.sh/) music player.
+Main theme is a GoldSRC (CS 1.6 & Half-Life inspired), however there are other retro-modern themes planned.
 ## Roadmap
 1. Initial Release
 2. Linux (an proably other OS's) hotfix <- We are here

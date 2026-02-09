@@ -1,0 +1,22 @@
+/* Dithering effect on Covers to make it look low res */
+/* Currently adds wear and tear on covers (also cool) */
+/* Inspiration: https://codepen.io/410gone/pen/dVVBmq */
+
+/* Artworks structure: */
+/* .mediaitem-artwork-container .artworkContainer -> .artworkLockup -> .artwork -> picture */
+.artwork::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    /* background-image: url("https://i.imgur.com/mJhLjaN.png"); */
+    background-image: url(assets/nnnoise.svg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode:screen;
+}
+
+/* SVG noise (embedded) */
+/* Adds a lightweight procedural noise SVG via data-URI. */
