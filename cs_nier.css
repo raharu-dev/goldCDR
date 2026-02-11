@@ -1,0 +1,24 @@
+/* This theme requires a lot more work than others because
+ it would be cool if this actually look like NIER UI */
+
+/*  GLORY TO MANKIND */
+
+/* LIGHT THEME */
+:root {
+    /* Main theme colors */
+
+    /* LIGHT */
+    --mainPrimary: #d1cdb7;
+    --mainSecondary: #454138;
+    --shadeDark: #454138;
+    --shadeLight: #454138;
+
+    /* DARK */
+    /* --mainPrimary:#454138; */
+    /* --mainSecondary:#d1cdb7; */
+    /* --shadeLight: #ccc8b1; */
+    /* --shadeDark: #ccc8b1; */
+
+    --mainText: #454138;
+    --mainHighlight: #57544a;
+}

@@ -27,6 +27,9 @@ stylesheets:
   - file: cs_95.css
     name: Color Scheme | 95
     description: Changes the colors of goldCDR to look more like Windows 95 theme
+  - file: cs_nier.css
+    name: Color Scheme | NIER
+    description: Changes the theme to look like NIER Automata UI (Very Experimental)
   - file: cs_oled.css 
     name: Color Scheme | OLED
     description: Changes the colors to more modern OLED high contrast theme if you like the style but not the colors

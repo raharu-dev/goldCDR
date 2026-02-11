@@ -12,9 +12,9 @@
 
 :root {
     /* Main theme colors */
-    --mainLight: #4C5844;
-    --mainDark: #3F4738;
-    --mainWhite: #EFF6EE;
+    --mainPrimary: #4C5844;
+    --mainSecondary: #3F4738;
+    --mainText: #EFF6EE;
     --mainHighlight: #D5BD32;
 
     /* Colors used for box shading */
@@ -60,7 +60,7 @@
 
 /* Windows vibrancy fix so it will always work */
 .root-layout-container{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
 } 
 
 /* ------------------------------------------------------------------------------ */
@@ -77,7 +77,7 @@
     .play, .ion-ios-close, .menu-btn, .menu[data-v-a0ad662b], .ri-list-item, .chrome-button,
     button[data-v-031fce46], .play-btn[data-v-213e74d2], .add-to-library-btn
     {
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
@@ -86,7 +86,7 @@
     .play:hover, .ion-ios-close:hover, .menu-btn:hover, .menu[data-v-a0ad662b]:hover, .ri-list-item:hover, .chrome-button:hover,
     button[data-v-031fce46]:hover, .play-btn[data-v-213e74d2]:hover, .add-to-library-btn:hover
     {
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     cursor: default;
 }
 .q-btn:active, .sidebar_nav-btn:active, .more-btn:active, body[density="desktop"] .sidebar_nav-btn:active,
@@ -107,14 +107,14 @@
 
 /* Selectboxes and TextBoxes*/
 .c-select, .cSearch, .q-field__control{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
         -2px -2px 0px var(--shadeLight) inset;
 }
 /* TextBoxes */
 .c-input, .c-input-container{
     cursor: text;
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -126,17 +126,17 @@
 }
 .header-search-results{
     padding: 10px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .header-search-results::after{
     padding: 100px;
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
 }
 
 .header-search-item{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
@@ -144,14 +144,14 @@
 /* Selections */
 .q-item {
     margin: 10px 0px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     cursor: default;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 /* .q-list {
     padding: 10px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 } */
@@ -174,15 +174,15 @@ input[type=checkbox][switch]:before{
 .item-set{ 
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     padding:10px;
 }
 /* Select boxes (like the ones in settings) */
 option{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
 }
 option:hover{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
 }
 option::checkmark{
     color:var(--mainHighlight)
@@ -204,12 +204,12 @@ body.body--dark, body.body--light {
 
 /* Make most of the parts by default the mainLight color */
 :root{
-    --q-dark: var(--mainLight);
+    --q-dark: var(--mainPrimary);
 }
 
 /* Main background */
 html[no-glass] {
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
 }
 .ns-qlayout::after{
     content: "";
@@ -218,13 +218,13 @@ html[no-glass] {
     z-index: 2;
     pointer-events: none;
 
-    /* background-color: var(--mainDark); */
+    /* background-color: var(--mainSecondary); */
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
 /* Pop Ups */
 .cider-dialog-window{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
 }
 /* Settings */
 .settings-window, .cider-dialog-window, .cider-dialog-window--generic{
@@ -245,11 +245,11 @@ html[no-glass] {
 /* Sidebar on left */
 /* Current implementation is really scuffed, but it works and makes it all static looking */
 .sidebar-group{
-    /* background-color: var(--mainDark); */
+    /* background-color: var(--mainSecondary); */
     padding-top:10px;
 }
 .sidebar-scroll-content{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     margin:10px;
 }
 .sidebar-scroll-content::after{ 
@@ -265,16 +265,16 @@ html[no-glass] {
 }
 /* Groups from sidebar */
 .am-expansion-item{ 
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .am-expansion-item:hover{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
 }
 .am-expansion-item:active{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -287,7 +287,7 @@ html[no-glass] {
 /* PLAYBACK */
 /* ----------------------------------------*/
 .lcdControls{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -308,7 +308,7 @@ html[no-glass] {
     color: var(--mainHighlight);
 }
 input[data-v-02f8a987], input[data-v-5887f795]{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     --progressColor: var(--mainHighlight);
     border-radius: 0;
     height: 10px;
@@ -317,7 +317,7 @@ input[data-v-02f8a987], input[data-v-5887f795]{
 }
 input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-slider-thumb{
     border-radius: 0;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
@@ -351,7 +351,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 /* i.e. Top Picks For You, albums and playlists */
 .powerswoosh-chin-artwork{ 
     margin-top:10px;
-    background-color:  var(--mainDark);
+    background-color:  var(--mainSecondary);
     background-image: none;
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
@@ -371,31 +371,31 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 .tracks-list{
     padding: 10px;
     gap: 10px;
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
 .ri-list-item{
     margin: 5px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
     color: var(--mainHighlight)
 }
 .ri-list-item.selected[data-v-6e9a3857]{ /* Kind of broken */
-    /* --keyColor: var(--mainLight); */
-    --keyColor: var(--mainDark);
+    /* --keyColor: var(--mainPrimary); */
+    --keyColor: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .album-details{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .album-header{
-    --bgColor: var(--mainLight);
+    --bgColor: var(--mainPrimary);
     --textColor1: var(--mainHighlight);
 }
 .shelf-artwork::after{
@@ -407,7 +407,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
     instead of just album-actions-right -> album-actions-misc (or something)
 */
 .album-actions[data-v-ccafc47d]{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
@@ -420,7 +420,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
     display: flex;
 }
 .tracks-header{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     padding: 10px;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
@@ -429,18 +429,18 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 .album-header-colorized[data-v-1f0eadf7] .q-btn, .album-header-colorized[data-v-ccafc47d] .q-btn{ /* EDITORIAL LAYOUT, NORMAL */
     --outlineColor: none;
     --backgroundGradient: none;
-    --textColor1: var(--mainWhite);
+    --textColor1: var(--mainText);
 }
 /* Suggestions at the bottom */
 .playlist-suggestion-card{
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .q-item-type[data-v-3a356767]{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -459,13 +459,13 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 }
 /* Description of an album */
 .curator-content{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     margin: 10px;
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
 .metadata-list{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
     padding-left:10px;
@@ -481,7 +481,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
     -2px -2px 0px var(--shadeLight) inset;
 }
 .text-grey-5{
-    color: var(--mainWhite);
+    color: var(--mainText);
     opacity: 1;
 }
 /* ----------------------------------------*/
@@ -496,12 +496,12 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 /* ----------------------------------------*/
 .q-mb-lg{
     padding: 10px;
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
 .mediaitem-topresult{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
@@ -521,7 +521,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 .mediaitem-card{
     margin: 5px;
     padding: 10px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
 } */
 
 /* ----------------------------------------*/
@@ -547,7 +547,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 .settings-page-bounds{
     margin: 39px 10px 10px 10px;
     padding:0;
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
 }
 .settings-page-bounds::after{
     content: "";
@@ -565,7 +565,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 /* This might overlap with other elements */
 .selected, .settings-sidebar-item.selected[data-v-6015df9e]{ 
     transform: translate(0px);
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -573,17 +573,17 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 /* Immersive View */
 /* ----------------------------------------*/
 .immersive-grid{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
 }
 /* Items in queue (probably overlap) */
 .queue-item{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 /* Right side of this mode */
 .immersive-tab{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
         box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
     padding:10px;
@@ -592,7 +592,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
     margin:10px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
     /* Breaks with japanese */
@@ -600,12 +600,12 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 }
 /* The three icons that appear when hovered on right side */
 .immersive-tabs{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
         box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .q-tab--active{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -623,12 +623,12 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 /* SONGS TAB */
 /* ----------------------------------------*/
 .header-frow{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
         box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .library-songs-view{
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     padding: 10px;
     gap: 10px;
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
@@ -636,15 +636,15 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 }
 .library-song-item {
     margin:5px;
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .library-song-item:hover {
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
 }
 .library-song-item:active {
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -652,14 +652,14 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 /* ALBUM LIBRARY */
 /* ----------------------------------------*/
 .ri-shelf-item{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     margin: 10px;
     padding-bottom: 20px;
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
 }
 .rich-album-grid-details{
-    background-color: var(--mainLight);
+    background-color: var(--mainPrimary);
     box-shadow: 2px 2px 0px var(--shadeLight) inset,
     -2px -2px 0px var(--shadeDark) inset;
     --textColor: var(--mainHighlight);
@@ -670,14 +670,14 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 }
 /* ALBUM AFTER CLICKING */
 .title-text{
-    color:var(--mainWhite)
+    color:var(--mainText)
 }
 .artwork[data-v-3d901d75][data-v-1500eb67]{
     width: 75%;
     height: 75%;
 }
 .artwork[data-v-3d901d75][data-v-1500eb67]::after{
-    /* background-color: var(--mainDark); */
+    /* background-color: var(--mainSecondary); */
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
 }
@@ -691,7 +691,7 @@ input[data-v-02f8a987]::-webkit-slider-thumb, input[data-v-5887f795]::-webkit-sl
 }
 .rag-content{
     margin-left: 10px;
-    background-color: var(--mainDark);
+    background-color: var(--mainSecondary);
     box-shadow: 2px 2px 0px var(--shadeDark) inset,
     -2px -2px 0px var(--shadeLight) inset;
     padding-bottom: 15px;
