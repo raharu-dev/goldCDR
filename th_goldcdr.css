@@ -109,6 +109,9 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 /* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
+.mediaitem-topresult, /* Top results on search */
+.item-set[data-v-1b6d3540],
+/* .powerswoosh, */
 .player, /* Player on PLAYBACK that contains album name, song and artwork */ /*.lcdplayer-info, /*.amp-lcd-container,*/
 .header-content,
 input[data-v-02f8a987]::-webkit-slider-thumb,
@@ -151,16 +154,18 @@ input[data-v-5887f795],
     border: 2px solid;
     border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
 }
+.shelf-navigation:hover::before, /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
 /* ------------------------- */
 /* Z. Artwork
 /* ------------------------- */
 /* .artwork, Okay it actually do some stuff, some breaks and for some does nothing. */
 .social-overlay-content[data-v-268844cf], /* Artists featured album */
 .artwork[data-v-3d901d75], /* Top Songs of an artists */
-.artworkContainer, /* Container for most of the Covers (like on HOME, PLAYLISTS) */
+/* .artworkContainer, /* Container for most of the Covers (like on HOME, PLAYLISTS) */
 .album-artwork, /* Container for Covers inside of ALBUMS/PLAYLISTS */
-.player-artwork, /* Container for artwork inside of PLAYER at bottom*/
+/* .player-artwork, /* Container for artwork inside of PLAYER at bottom*/
 .track-artwork, /* Container for artwork inside of PLAYLISTS/ALBUMS tracks */
+.artwork[data-v-0888a670], /* Artwork on POWERSWOOSH on HOME and other ALBUMS/PLAYLISTS on HOME view, PLAYER-ARTWORK also */
 .onlyshadowInnerCLASS{
     border: 2px solid;
     border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
@@ -174,16 +179,16 @@ input[data-v-5887f795],
 .window-control.isWin32[data-v-663b9be4]:before { /* Window Controls (Minimize, Maximize, Close) WINDOWS */
     background-color: var(--mainHighlight);
 }
-.shelf-navigation:hover::before{ /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
-    border: 2px solid;
-    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
-}
 .search-box_container{ /* Search box at the top of the window */
     box-shadow: none;
     background-color: var(--mainSecondary);
 }
 .q-item{
     margin: 5px;
+}
+.powerswoosh, /* The big albums/playlists on Top Picks For You screen on HOME */
+.item-set[data-v-1b6d3540]{ /* Albums and Songs on Home Page and some on search STILL BREAKS PLAYLISTS ON SEARCH!!! */
+    padding: 5px;
 }
 /* -------------------------------------------------------- */
 /* Y. Playback
@@ -203,24 +208,6 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
 
 }
 /* -------------------------------------------------------- */
-/* Y. SETTINGS
-/* -------------------------------------------------------- */
-.settings-page-bounds{ /* The box containing the settings on the right side */
-    margin: 39px 10px 10px 10px;
-    padding:0;
-}
-.settings-sidebar-item.selected{
-    background-color: var(--mainSecondary);
-    transform: none;
-    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
-}
-.settings-sidebar-item:hover{
-    transform: none;
-}
-.q-list{ /* Probably OVERLAPS, this is the page view list of the settings like in general etc.*/
-    padding-bottom: 10px;
-}
-/* -------------------------------------------------------- */
 /* Y. SIDEBAR
 /* -------------------------------------------------------- */
 .sidebar-scroll-content{ /* The box on sidebar with all of the things in it */
@@ -238,6 +225,24 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
     justify-items: center;
     justify-content: center;
     align-content: center;
+}
+/* -------------------------------------------------------- */
+/* Y. SETTINGS
+/* -------------------------------------------------------- */
+.settings-page-bounds{ /* The box containing the settings on the right side */
+    margin: 39px 10px 10px 10px;
+    padding:0;
+}
+.settings-sidebar-item.selected{
+    background-color: var(--mainSecondary);
+    transform: none;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+}
+.settings-sidebar-item:hover{
+    transform: none;
+}
+.q-list{ /* Probably OVERLAPS, this is the page view list of the settings like in general etc.*/
+    padding-bottom: 10px;
 }
 /* -------------------------------------------------------- */
 /* Y. ALBUM / PLAYLIST
