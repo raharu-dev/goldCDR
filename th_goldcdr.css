@@ -109,6 +109,8 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 /* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
+.player, /* Player on PLAYBACK that contains album name, song and artwork */ /*.lcdplayer-info, /*.amp-lcd-container,*/
+.header-content,
 input[data-v-02f8a987]::-webkit-slider-thumb,
 input[data-v-5887f795]::-webkit-slider-thumb,
 .playlist-suggestion-card,
@@ -130,20 +132,15 @@ input[data-v-5887f795]::-webkit-slider-thumb,
 /* Y. Elements with INSET shadow styling
 /* -------------------------------------------------------- */
 /* ------------------------- */
-/* Z. Artwork
-/* ------------------------- */
-.artwork, /* Probably 99% of artworks this mean the rest can be disabled */
-/*.artworkContainer,*/ /* Container for most of the Covers (like on HOME, PLAYLISTS) */
-/*.album-artwork,*/ /* Container for Covers inside of ALBUMS/PLAYLISTS */
-/*.player-artwork,*/ /* Container for artwork inside of PLAYER at bottom*/
-/*.track-artwork,*/ /* Container for artwork inside of PLAYLISTS/ALBUMS tracks */
-/* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
+.profile-tab,
+.c-select--element, /* Dropdown menus such as the one on album view where you can select album order, or the ones in settings page */
 input[data-v-02f8a987],
 input[data-v-5887f795],
 .q-item[data-v-388ad613], /* Songs at the suggested section in Playlist View */
 .album-actions,
+.q-field__control, /* Text input box like the one iin Settings general view */
 .search-box_container,
 .search-container,
 .sidebar-scroll-content, 
@@ -151,6 +148,20 @@ input[data-v-5887f795],
 .shadowInnerCLASS{
     background-color: var(--mainSecondary);
     border-radius: 0px;
+    border: 2px solid;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+}
+/* ------------------------- */
+/* Z. Artwork
+/* ------------------------- */
+/* .artwork, Okay it actually do some stuff, some breaks and for some does nothing. */
+.social-overlay-content[data-v-268844cf], /* Artists featured album */
+.artwork[data-v-3d901d75], /* Top Songs of an artists */
+.artworkContainer, /* Container for most of the Covers (like on HOME, PLAYLISTS) */
+.album-artwork, /* Container for Covers inside of ALBUMS/PLAYLISTS */
+.player-artwork, /* Container for artwork inside of PLAYER at bottom*/
+.track-artwork, /* Container for artwork inside of PLAYLISTS/ALBUMS tracks */
+.onlyshadowInnerCLASS{
     border: 2px solid;
     border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
 }
@@ -206,6 +217,9 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
 .settings-sidebar-item:hover{
     transform: none;
 }
+.q-list{ /* Probably OVERLAPS, this is the page view list of the settings like in general etc.*/
+    padding-bottom: 10px;
+}
 /* -------------------------------------------------------- */
 /* Y. SIDEBAR
 /* -------------------------------------------------------- */
@@ -216,7 +230,8 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
     padding-bottom: 10px;
 }
 .profile-tab{ /* Tab with Username*/
-    border: none;
+    /* border: none; */
+    margin:0px 10px 0px 10px;
 }
 .expansion-items{
     align-items:center;
@@ -252,5 +267,16 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
 }
 .playlist-suggestion-card{ /* The suggestions at the bottom of Playlist */
     background-color: var(--mainPrimary);
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */ /* Deleting this because I need to make the gap for ALBUMS also and Favourite Songs view also */
+}
+.album-view{ /* Page that contains everything about ALBUM/PLAYLIST?/FAVOURITE SONGS */
+    padding-bottom: 50px; 
+}
+/* -------------------------------------------------------- */
+/* Y. ARTIST
+/* -------------------------------------------------------- */
+.header-content{ /* The bar that contains Artist name, favorite button etc. */
+    background-color: var(--mainPrimary);
+    margin: 10px;
+    color: var(--mainHighlight)
 }
