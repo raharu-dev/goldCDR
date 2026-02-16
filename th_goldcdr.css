@@ -109,8 +109,15 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 /* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
-.settings-window, /* Main Settings window with all the things inside of it. */
+input[data-v-02f8a987]::-webkit-slider-thumb,
+input[data-v-5887f795]::-webkit-slider-thumb,
+.playlist-suggestion-card,
+.tracks-header,
+.album-details,
+.settings-sidebar-item, /* Categories in SETTINGS window */
+.settings-window, /* Main SETTINGS window with all the things inside of it. */
 .q-btn, /* Standard Buttons, many of the small ones at HOME, few on SETTINGS, few on views like Library->Albums ("Show in Apple Music") */
+.q-item, /* Items in SETTINGS themes most likely it overlaps with something */
 .ri-list-item, /* Songs on Album, Playlist, Libary->Albums, Library->Artists */
 .am-audio-settings, /* The window where you can set equalizer etc. */
 .shadowOuterCLASS{
@@ -125,13 +132,20 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 /* ------------------------- */
 /* Z. Artwork
 /* ------------------------- */
-.artworkContainer, /* Container for most of the Covers (like on HOME, PLAYLISTS) */
-.album-artwork, /* Container for Covers inside of ALBUMS/PLAYLISTS */
-.player-artwork, /* Container for artwork inside of PLAYER at bottom*/
-.track-artwork, /* Container for artwork inside of PLAYLISTS/ALBUMS tracks */
+.artwork, /* Probably 99% of artworks this mean the rest can be disabled */
+/*.artworkContainer,*/ /* Container for most of the Covers (like on HOME, PLAYLISTS) */
+/*.album-artwork,*/ /* Container for Covers inside of ALBUMS/PLAYLISTS */
+/*.player-artwork,*/ /* Container for artwork inside of PLAYER at bottom*/
+/*.track-artwork,*/ /* Container for artwork inside of PLAYLISTS/ALBUMS tracks */
 /* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
+input[data-v-02f8a987],
+input[data-v-5887f795],
+.q-item[data-v-388ad613], /* Songs at the suggested section in Playlist View */
+.album-actions,
+.search-box_container,
+.search-container,
 .sidebar-scroll-content, 
 .settings-page-bounds, 
 .shadowInnerCLASS{
@@ -146,9 +160,36 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 /* -------------------------------------------------------- */
 /* Y. MAIN / MIXED - For items that might appear in multiple places
 /* -------------------------------------------------------- */
+.window-control.isWin32[data-v-663b9be4]:before { /* Window Controls (Minimize, Maximize, Close) WINDOWS */
+    background-color: var(--mainHighlight);
+}
 .shelf-navigation:hover::before{ /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
     border: 2px solid;
     border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+}
+.search-box_container{ /* Search box at the top of the window */
+    box-shadow: none;
+    background-color: var(--mainSecondary);
+}
+.q-item{
+    margin: 5px;
+}
+/* -------------------------------------------------------- */
+/* Y. Playback
+/* -------------------------------------------------------- */
+input[data-v-02f8a987], /* Playback bar */ 
+input[data-v-5887f795]{ /* Volume Bar */
+    background-color: var(--mainSecondary);
+    --progressColor: var(--mainHighlight);
+    border-radius: 0;
+    height: 10px;
+
+}
+input[data-v-02f8a987]::-webkit-slider-thumb, /* Playback Dot */
+input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
+    border-radius: 0;
+    background-color: var(--mainPrimary);
+
 }
 /* -------------------------------------------------------- */
 /* Y. SETTINGS
@@ -156,6 +197,14 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 .settings-page-bounds{ /* The box containing the settings on the right side */
     margin: 39px 10px 10px 10px;
     padding:0;
+}
+.settings-sidebar-item.selected{
+    background-color: var(--mainSecondary);
+    transform: none;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+}
+.settings-sidebar-item:hover{
+    transform: none;
 }
 /* -------------------------------------------------------- */
 /* Y. SIDEBAR
@@ -174,4 +223,34 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
     justify-items: center;
     justify-content: center;
     align-content: center;
+}
+/* -------------------------------------------------------- */
+/* Y. ALBUM / PLAYLIST
+/* -------------------------------------------------------- */
+.album-details{ /* The window at the top of an album or playlist containing all the info and play, shuffle buttons */
+    background-color: var(--mainPrimary);
+    padding: 10px;
+}
+.album-actions{ /* The window containing album-action-left and right, it is the window with Play, Shuffle, etc. */
+    padding: 2px;
+}
+.album-actions-left{ /* Window containing Play, Shuffle buttons (left side)*/
+    display: flex;
+}
+.album-actions[data-v-e77db66d], .album-actions[data-v-3cbd6435]{ /* Window containing Add, other buttons (right side) it is inside album-actions-left so it needs to overwrite what I did in album-actions above. */
+    border:none;
+}
+.tracks-header{  /* Window with search, album order etc. on Album/Playlist view */
+    padding: 5px;
+}
+.c-input[data-v-3c5ffa71]{ /* Search box input at the Album/Playlist view */
+    border: none;
+}
+.ri-list-item{ /* Tracks/Songs on Album/Playlist view */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.playlist-suggestion-card{ /* The suggestions at the bottom of Playlist */
+    background-color: var(--mainPrimary);
+    margin-bottom: 50px;
 }

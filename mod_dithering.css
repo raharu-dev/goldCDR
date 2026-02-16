@@ -4,6 +4,12 @@
 
 /* Artworks structure: */
 /* .mediaitem-artwork-container .artworkContainer -> .artworkLockup -> .artwork -> picture */
+
+:root{
+    --noise: 
+}
+
+
 .artwork::after{
     content: "";
     position: absolute;
