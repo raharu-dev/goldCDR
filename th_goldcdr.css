@@ -80,6 +80,7 @@ and search for:
     --borderRadiusLarge: 0;
     --borderRadiusXLarge: 0;
     --genericBorderRadius: 0px;
+    --eq-bars-bg-color: var(--mainHighlight);
 }
 /* Changing the background of the app window */
 .root-layout-container{
@@ -105,6 +106,7 @@ and search for:
 .sidebar_nav-btn, /* Smaller buttons on the sidebar, works only with "UI Size Profile: Default"*/
 body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however works only "UI Size Profile: Desktop", border-radius is overwritten*/
 .am-expansion-item, /* The expanding buttons with things like "Apple Music", "Library", "Playlists", etc. */
+.profile-mainmenu, /* The button that opens settings on the sidebar */
 /* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
@@ -125,11 +127,14 @@ input[data-v-5887f795]::-webkit-slider-thumb,
 .q-item, /* Items in SETTINGS themes most likely it overlaps with something */
 .ri-list-item, /* Songs on Album, Playlist, Libary->Albums, Library->Artists */
 .am-audio-settings, /* The window where you can set equalizer etc. */
+.disc-header, /* The bar that appears when song have more than one disc */
+button[data-v-031fce46], /* Buttons that appears when hovering over an artwork */
 .shadowOuterCLASS{
     background-color: var(--mainPrimary);
     border-radius: 0px;
     border: 2px solid;
     border-color: var(--shadeLight) var(--shadeDark) var(--shadeDark) var(--shadeLight);
+    cursor: default;
 }
 /* -------------------------------------------------------- */
 /* Y. Elements with INSET shadow styling
@@ -153,6 +158,7 @@ input[data-v-5887f795],
     border-radius: 0px;
     border: 2px solid;
     border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+    cursor: default;
 }
 .shelf-navigation:hover::before, /* Outlines that show up when hovering over arrows on HOME, NEW, RADIO*/
 /* ------------------------- */
@@ -169,6 +175,10 @@ input[data-v-5887f795],
 .onlyshadowInnerCLASS{
     border: 2px solid;
     border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+    cursor: default;
+}
+.artworkLockup{
+    cursor: default;
 }
 /* ------------------------------------------------------------------------------ */
 /* X. PAGES
@@ -234,10 +244,18 @@ svg, .q-icon{ /* Making Icons match the themes */
 .playback-controls[data-v-5533b083]>*{ /* The whole playback bar */
     opacity: 1;
 }
-input[type="range"]{
-
-    background: (90deg,var(--mainHighlight) var(--mainHighlight),var(--vibrantDivider) var(--progress),var(--vibrantDivider));
+input[type="range"]{ /* Playback bar and volume */
+    background: linear-gradient(90deg, var(--mainHighlight) var(--progress), var(--mainSecondary) var(--progress), var(--mainSecondary));
 }
+.time-code[data-v-5533b083]{
+    opacity: 1;
+    background-color: var(--mainSecondary);
+    color: var(--mainHighlight);
+    border: 2px solid;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+    margin: 5px;
+}
+
 /* -------------------------------------------------------- */
 /* Y. SIDEBAR
 /* -------------------------------------------------------- */
@@ -256,6 +274,18 @@ input[type="range"]{
     justify-items: center;
     justify-content: center;
     align-content: center;
+}
+.playlist-folder-body[data-v-1a66073e]{
+    padding: 0;
+    width: 90%;
+}
+.profile-btn{
+    margin-right: 7px;
+}
+.profile-mainmenu{
+    padding: 0px;
+    background-color: var(--mainPrimary);
+    height: 100%;
 }
 /* -------------------------------------------------------- */
 /* Y. SETTINGS
@@ -305,7 +335,7 @@ input[type=checkbox][switch]:checked::before{
 input[type=checkbox][switch]:checked{
     background-color: var(--mainHighlight);
 }
-.q-field__control{
+.q-field__control, .qb-item-text, .title-text{ /* Many different colored texts */
     color: var(--mainHighlight)
 }
 /* -------------------------------------------------------- */
@@ -339,7 +369,16 @@ input[type=checkbox][switch]:checked{
     /* margin-bottom: 50px; */ /* Deleting this because I need to make the gap for ALBUMS also and Favourite Songs view also */
 }
 .album-view{ /* Page that contains everything about ALBUM/PLAYLIST?/FAVOURITE SONGS */
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
+}
+.qb-item-content{
+    color: var(--mainHighlight);
+}
+amp-eq-bars, .bar{
+    color: var(--mainHighlight);
+}
+.bar{
+    background-color: var(--mainHighlight);
 }
 /* -------------------------------------------------------- */
 /* Y. ARTIST

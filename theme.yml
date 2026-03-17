@@ -2,17 +2,17 @@ name: goldCDR
 stylesheets:
 
     # Themes
-  - file: th_main.css
-    name: Theme | GoldCDR
-    description: The main GoldSRC inspired theme. [Please use recommended settings] 😉
   - file: th_goldcdr.css
     name: Theme | goldCDR
-    description: The main GoldSRC inspired theme. (NEW STYLE, WIP) 🛠️
+    description: The NEW main GoldSRC inspired theme. The more consistent one and overall better (WIP) 🛠️
+  - file: th_goldcdrOLD.css
+    name: Theme | GoldCDR
+    description: The OLD main GoldSRC inspired theme. [Please use recommended settings] 😉
 
     # Modifications to the theme
   - file: mod_disableambience.css
     name: Mod | Disable Ambience
-    description: Disables the ambient background on Album/Playlist view 🖼️
+    description: Disables the ambient background on Album/Playlist view (Works only on OLD currently) 🖼️
   - file: mod_uglyfonts.css
     name: Mod | Ugly Fonts
     description: Makes the usage of an old styled pixelated font (Probably only on Windows 🪟)
