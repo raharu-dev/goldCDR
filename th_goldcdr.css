@@ -59,8 +59,7 @@ and search for:
 *,*::before, *:hover{
     /* Disabling rounded corners */
     border-radius: 0;
-    /* Cursor: Pointer */
-    cursor: default;
+    /* cursor: default; <- Breaks window resizing*/
     /* All of the default background that makes the theme darker or lighter for no reason */
     background: none;
     /* Default shadows on many items */
@@ -109,9 +108,10 @@ body[density="desktop"] .sidebar_nav-btn, /* Same as sizebar_nav-btn however wor
 /* ------------------------- */
 /* Z. MIXED / OTHER - Things that are too less to make whole another categories for here */
 /* ------------------------- */
+.playback-action-button,
 .mediaitem-topresult, /* Top results on search */
 .item-set[data-v-1b6d3540],
-/* .powerswoosh, */
+.powerswoosh,
 .player, /* Player on PLAYBACK that contains album name, song and artwork */ /*.lcdplayer-info, /*.amp-lcd-container,*/
 .header-content,
 input[data-v-02f8a987]::-webkit-slider-thumb,
@@ -190,6 +190,12 @@ input[data-v-5887f795],
 .item-set[data-v-1b6d3540]{ /* Albums and Songs on Home Page and some on search STILL BREAKS PLAYLISTS ON SEARCH!!! */
     padding: 5px;
 }
+.new-shell{ /* The main window itself */
+    background-color: var(--mainPrimary);
+    border-radius: 0px;
+    border: 3px solid;
+    border-color: var(--shadeLight) var(--shadeDark) var(--shadeDark) var(--shadeLight);
+}
 /* -------------------------------------------------------- */
 /* Y. Playback
 /* -------------------------------------------------------- */
@@ -206,6 +212,31 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
     border-radius: 0;
     background-color: var(--mainPrimary);
 
+}
+.div[data-v-1d87d213]{
+    background-color: var(--mainText);
+}
+._svg-icon{
+    background-color: var(--mainHighlight);
+}
+svg, .q-icon{ /* Making Icons match the themes */
+    color:var(--mainHighlight);
+}
+.playback-action-button{ /* Cointener for most buttons in playback i.e. play shuffle etc. */
+    background-color: var(--mainPrimary);
+    margin:2px;
+    opacity: 1;
+}
+.action-play[title="Pause"]{
+    background-color: var(--mainSecondary);
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+}
+.playback-controls[data-v-5533b083]>*{ /* The whole playback bar */
+    opacity: 1;
+}
+input[type="range"]{
+
+    background: (90deg,var(--mainHighlight) var(--mainHighlight),var(--vibrantDivider) var(--progress),var(--vibrantDivider));
 }
 /* -------------------------------------------------------- */
 /* Y. SIDEBAR
@@ -229,9 +260,19 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
 /* -------------------------------------------------------- */
 /* Y. SETTINGS
 /* -------------------------------------------------------- */
+.cider-dialog-container{ /* Fullsize container that contains Settings menu */
+    background-color: var(--mainSecondary);
+    border-radius: 0px;
+    border: 2px solid;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+    margin: 10px
+}
 .settings-page-bounds{ /* The box containing the settings on the right side */
     margin: 39px 10px 10px 10px;
     padding:0;
+}
+.settings-sidebar-item{
+    cursor: default;
 }
 .settings-sidebar-item.selected{
     background-color: var(--mainSecondary);
@@ -243,6 +284,29 @@ input[data-v-5887f795]::-webkit-slider-thumb{ /* Volume Bar Dot */
 }
 .q-list{ /* Probably OVERLAPS, this is the page view list of the settings like in general etc.*/
     padding-bottom: 10px;
+}
+input[type=checkbox]{
+    background-color: var(--mainSecondary);
+    border: 2px solid;
+    border-color: var(--shadeDark) var(--shadeLight) var(--shadeLight) var(--shadeDark);
+    cursor: default;
+}
+input[type=checkbox]::before{
+    background-color: var(--mainPrimary);
+    border-radius: 0px;
+    border: 2px solid;
+    border-color: var(--shadeLight) var(--shadeDark) var(--shadeDark) var(--shadeLight);
+    top: -3px;
+    left: -3px;
+}
+input[type=checkbox][switch]:checked::before{
+    left: 11px;
+}
+input[type=checkbox][switch]:checked{
+    background-color: var(--mainHighlight);
+}
+.q-field__control{
+    color: var(--mainHighlight)
 }
 /* -------------------------------------------------------- */
 /* Y. ALBUM / PLAYLIST

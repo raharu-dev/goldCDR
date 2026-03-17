@@ -3,7 +3,7 @@
     --mainPrimary: rgba(0, 0, 0, 0.1);
     --mainSecondary: rgba(0, 0, 0, 0.1);
     --mainText: #ffffff;
-    /* --mainHighlight: #ff0000; */
+    --mainHighlight: #00c7ba;
 
     /* Colors used for box shading */
     --shadeLight: rgba(100, 100, 100, 0.1);
