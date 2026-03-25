@@ -6,7 +6,7 @@ stylesheets:
     name: Theme | goldCDR
     description: The NEW main GoldSRC inspired theme. The more consistent one and overall better (WIP) 🛠️
   - file: th_goldcdrOLD.css
-    name: Theme | GoldCDR
+    name: Theme | GoldCDR [OLD]
     description: The OLD main GoldSRC inspired theme. [Please use recommended settings] 😉
 
     # Modifications to the theme
