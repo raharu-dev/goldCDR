@@ -97,7 +97,8 @@ and search for:
 .root-layout-container{
     background-color: var(--mainPrimary);
 }
-.absolute-full{
+/* .absolute-full{ */
+.new-shell-page-container{
     border: 2px solid var(--shadeDark);
     border-right-color: var(--shadeLight);
     border-bottom-color: var(--shadeLight);
@@ -136,10 +137,16 @@ input[data-v-5887f795]::-webkit-slider-thumb,
 .settings-window, /* Main SETTINGS window with all the things inside of it. */
 .q-btn, /* Standard Buttons, many of the small ones at HOME, few on SETTINGS, few on views like Library->Albums ("Show in Apple Music") */
 .q-item, /* Items in SETTINGS themes most likely it overlaps with something */
-.ri-list-item, /* Songs on Album, Playlist, Libary->Albums, Library->Artists */
+.ri-list-item, /* Songs on Album, Playlist, Library->Albums, Library->Artists */
 .am-audio-settings, /* The window where you can set equalizer etc. */
 .disc-header, /* The bar that appears when song have more than one disc */
 button[data-v-031fce46], /* Buttons that appears when hovering over an artwork */
+.c-listitem-short, /* Songs that appear on New tab, Search results, Top Songs of an Artist */
+.mediaitem-card[data-v-b245fbd5], /* The cards containing playlists from All Playlists*/
+.library-song-item, /* Songs in Library/Songs */
+.header-frow[data-v-dfe38bf7], /* Library/Songs - Header with sorting elements */
+.library-toolbar, /* Header with section name and tools in library sections on top */
+.ri-shelf-item, /* */
 .shadowOuterCLASS{
     background-color: var(--mainPrimary);
     border-radius: 0px;
@@ -166,6 +173,8 @@ input[data-v-5887f795],
 .search-container,
 .sidebar-scroll-content, 
 .settings-page-bounds, 
+.powerswoosh-chin, /*The container for text on Top Picks for You texts (powerswooshes)*/
+.info-section, /* Similar to powerswoosh-chin but for things like recently played*/
 .shadowInnerCLASS{
     background-color: var(--mainSecondary);
     border-radius: 0px;
@@ -217,11 +226,23 @@ input[data-v-5887f795],
 .item-set[data-v-1b6d3540]{ /* Albums and Songs on Home Page and some on search STILL BREAKS PLAYLISTS ON SEARCH!!! */
     padding: 5px;
 }
+.powerswoosh-chin,
+.info-section{
+    margin-top: 5px;
+    padding: 2px;
+}
 .new-shell{ /* The main window itself */
     background-color: var(--mainPrimary);
     border-radius: 0px;
     border: 3px solid;
     border-color: var(--borderOutset);
+}
+.c-listitem-short{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.mediaitem-shelf-content{ /* Container of c-listitem-short items */
+    gap:4px;
 }
 /* -------------------------------------------------------- */
 /* Y. Playback
@@ -406,6 +427,15 @@ amp-eq-bars, .bar{
 .bar{
     background-color: var(--mainHighlight);
 }
+
+.mediaitem-card[data-v-b245fbd5]{
+    padding: 10px;
+}
+.mediaitem-artwork-container{ /* Images inside the ALL Playlists, playlists */
+    /* This is temporary fix because it cuts of the playlists however currently is good enough*/
+    max-width: 100%;
+    width: 100%;
+}
 /* -------------------------------------------------------- */
 /* Y. ARTIST
 /* -------------------------------------------------------- */
@@ -420,5 +450,31 @@ amp-eq-bars, .bar{
 }
 
 /* ------------------------------------------------------------------------------ */
-/* X. Fullscreen
+/* X. LIBRARY
 /* ------------------------------------------------------------------------------ */
+.library-toolbar{
+    /* margin-bottom: 10px; */
+    margin: 10px;
+    padding: 10px;
+}
+/* .rich-container{
+    height: 100%;
+} */
+/* .q-page[sfc-name="LibrarySongs"],
+.q-page[sfc-name="LibraryAlbums"],
+.q-page[sfc-name="RecentlyAdded"]{
+    margin: 10px;
+} */
+/* -------------------------------------------------------- */
+/* Y. SONGS
+/* -------------------------------------------------------- */
+.library-song-item{
+    margin-top:5px;
+}
+
+/* -------------------------------------------------------- */
+/* Y. ALBUMS, RECENTLY PLAYED
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* Y. ARTISTS
+/* -------------------------------------------------------- */
